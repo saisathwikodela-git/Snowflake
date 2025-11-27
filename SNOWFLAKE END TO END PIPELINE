@@ -1,0 +1,37 @@
+RAW LAYER TABLES:
+
+CREATE OR REPLACE TABLE RAW_DB.RAW.RAW_CUSTOMER (
+    CUSTOMER_ID        NUMBER,
+    FIRST_NAME         STRING,
+    LAST_NAME          STRING,
+    EMAIL              STRING,
+    PHONE              STRING,
+    ADDRESS            STRING,
+    CREATED_AT         STRING,
+    LAST_UPDATED       STRING,
+    IS_DELETED         STRING
+);
+
+--
+INSERT INTO RAW.RAW_CUSTOMER VALUES
+(1, 'John ', ' Doe', 'John.Doe@Gmail.com', '(123)-456 7890', ' 12 Street Road ', '2023-01-01', '2023-03-01', '0'),
+(2, 'Anna', 'Smith ', 'Anna.Smith@Yahoo.com', '123 456 9999', '45 Lake View', '2023-02-10', '2023-03-10', '0'),
+(3, 'Mike ', ' Jordan', ' Mike.Jordan@outlook.com ', '999-888-7777', ' 78 Hill Road ', '2023-01-15', '2023-03-20', '1');
+-----
+TABLE 2:
+
+CREATE OR REPLACE TABLE RAW.RAW_PRODUCT (
+    PRODUCT_ID        NUMBER,
+    PRODUCT_NAME      STRING,
+    CATEGORY          STRING,
+    PRICE             STRING,
+    CREATED_AT        STRING,
+    LAST_UPDATED      STRING,
+    IS_DELETED        STRING
+);
+
+INSERT INTO RAW.RAW_PRODUCT VALUES
+(101, ' iphone 14 ', 'Mobile', '$799', '2023-01-01', '2023-01-05', '0'),
+(102, ' Samsung TV ', 'Electronics', '$1200', '2023-01-05', '2023-01-10', '0'),
+(103, ' Dell Laptop ', NULL, '$999', '2023-01-10', '2023-01-15', '1');
+
